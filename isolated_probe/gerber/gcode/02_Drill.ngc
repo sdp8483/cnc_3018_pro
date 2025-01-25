@@ -1,0 +1,108 @@
+( pcb2gcode 2.5.0 )
+( Software-independent Gcode )
+
+( This file uses 2 drill bit sizes. )
+( Bit sizes: [0.8mm] [1mm] )
+
+G94       (Millimeters per minute feed rate.)
+G21       (Units == Millimeters.)
+G91.1     (Incremental arc distance mode.)
+G90       (Absolute coordinates.)
+G00 S13000     (RPM spindle speed.)
+
+G00 Z15.00000 (Retract)
+T1
+M5      (Spindle stop.)
+G04 P1.00000
+(MSG, Change tool bit to drill size 0.8mm)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z2.00000
+G04 P1.00000
+
+G1 F120.00000
+G0 X-8.49884 Y-6.18998
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-12.67968 Y-3.53568
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-12.67968 Y-6.07568
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-20.29968 Y-3.53568
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-20.29968 Y-6.07568
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-24.50084 Y-6.18998
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-24.50084 Y-13.80998
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-20.95500 Y-18.00098
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-18.45564 Y-18.00098
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-14.45514 Y-18.00098
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-11.95578 Y-18.00098
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-8.49884 Y-13.80998
+G1 Z-2.50000
+G1 Z2.00000
+
+G00 Z15.00000 (Retract)
+T3
+M5      (Spindle stop.)
+G04 P1.00000
+(MSG, Change tool bit to drill size 1mm)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z2.00000
+G04 P1.00000
+
+G1 F120.00000
+G0 X-4.00050 Y-4.00050
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-4.00050 Y-6.54050
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-4.00050 Y-9.08050
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-12.83208 Y-13.45692
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-15.37208 Y-13.45692
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-17.91208 Y-13.45692
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-20.45208 Y-13.45692
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-28.90012 Y-6.63956
+G1 Z-2.50000
+G1 Z2.00000
+G0 X-28.90012 Y-4.09956
+G1 Z-2.50000
+G1 Z2.00000
+
+G00 Z15.000 ( All done -- retract )
+
+M5      (Spindle off.)
+G04 P1.000000
+M9      (Coolant off.)
+M2      (Program end.)
+
