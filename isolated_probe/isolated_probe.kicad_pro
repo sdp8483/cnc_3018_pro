@@ -58,7 +58,9 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "lib_footprint_mismatch|167500000|109500000|542f2099-c910-46bf-a803-e112f722edd0|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -508,7 +510,7 @@
       "svg": "",
       "vrml": ""
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "page_layout/pl_page_layout.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
