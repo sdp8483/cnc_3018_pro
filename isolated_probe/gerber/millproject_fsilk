@@ -1,0 +1,53 @@
+# pcb2gcode configuration file
+
+# input files
+front=ET3111_breakout-F_Silkscreen.gbr
+
+# output files
+output-dir=gcode
+front-output=05_FSilk.ngc
+
+# common
+metric=true
+metricoutput=true
+zsafe=2mm
+spinup-time=1
+spindown-time=1
+zchange=15mm
+zchange-absolute=false # use zchange as a machine coordinates height (G53), TODO experiment with
+nog64=1			# G64 throws error on grbl
+
+# PCB milling
+#voronoi=1 		# generate voronoi regions
+draw-gerber-lines=1	# used for silkscreen
+x-offset=-64		# used for front silkscreen
+mill-diameters=0.1mm
+isolation-width=1000mm
+zwork=-0.1000mm
+mill-feed=120mm/min
+mill-vertfeed=60mm/min
+mill-infeed=0.1000mm	# maximum z depth per pass
+mill-speed=13000	# spindle speed
+
+# Drilling and Milling Holes
+milldrill-diameter=1.0mm	# diameter of endmill used for milldrill
+min-milldrill-hole-diameter=2.5mm	# holes smaller are drilled
+zdrill=-2.5mm	# drill depth
+zmilldrill=-2.5mm	# milldrill depth
+drills-available=0.8mm,0.9mm,1.0mm,1.1mm,1.2mm,1.3mm,1.4mm,1.5mm,1.6mm,1.7mm,1.8mm,1.9mm,2.0mm,2.1mm,2.2mm,2.3mm,2.4mm,2.5mm
+drill-feed=120mm/min
+drill-speed=13000	# spindel speed
+drill-side=back
+nog81=true	# use G00 and G01 instead of G81 for gerbl
+
+# outline
+cutter-diameter=1.0mm
+zcut=-2.5mm
+cut-feed=120mm/min
+cut-vertfeed=60mm/min
+cut-speed=13000	# spindle speed
+cut-infeed=0.5mm	# maximum cut depth
+cut-side=back
+bridges=0
+bridgesnum=0
+zbridges=0

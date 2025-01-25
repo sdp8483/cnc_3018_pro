@@ -1,0 +1,5 @@
+# Zip Files
+*.zip
+
+# track CSV BOM files from this directory
+!*.csv
