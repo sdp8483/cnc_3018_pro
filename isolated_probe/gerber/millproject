@@ -1,9 +1,9 @@
 # pcb2gcode configuration file
 
 # input files
-back=ET3111_breakout-B_Cu.gbr
-drill=ET3111_breakout.drl
-outline=ET3111_breakout-Edge_Cuts.gbr
+back=isolated_probe-B_Cu.gbr
+drill=isolated_probe.drl
+outline=isolated_probe-Edge_Cuts.gbr
 
 # output files
 output-dir=gcode
