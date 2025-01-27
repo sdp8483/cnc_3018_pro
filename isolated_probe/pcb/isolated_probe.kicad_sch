@@ -1973,7 +1973,6 @@
 	)
 	(label "PROBE"
 		(at 91.44 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1984,7 +1983,6 @@
 	)
 	(label "+5V_ISOLATED"
 		(at 148.59 81.28 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1995,7 +1993,6 @@
 	)
 	(label "PROBE_ISOLATED"
 		(at 148.59 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
